@@ -18,5 +18,5 @@ This image only contains Apache httpd with the defaults from upstream.There is P
 If you don't want to include a Dockerfile in your project, it is sufficient to do the following:
 
 ```
-docker run --name n42_apache23  -e MYSQL_IP=172.21.207.144  -e MYSQL_DB=n42 -e MYSQL_USER=n42  -e MYSQL_PASSWORD=n42  -e MEMCACHED_IP=172.17.0.3 -d --label display_service="Apache Server" --label service="apache" -p 8888:80 basivireddy/apache:latest
+docker run --name n42_apache23  -e MYSQL_IP=<mysql-ip>  -e MYSQL_DB=<dbname> -e MYSQL_USER=<dbuser>  -e MYSQL_PASSWORD=<dbpassword>  -e MEMCACHED_IP=<memcached-ip> -d --label display_service="Apache Server" --label service="apache" -p 8888:80 n42inc/apache:latest
 ```
